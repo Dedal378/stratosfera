@@ -1,23 +1,26 @@
 <template>
-  <div id="app">
-    <Header msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="">
+    <Aside />
+    <Header />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
+  import Header from './components/Header.vue'
+  import Aside from './components/Aside'
 
-export default {
-  name: 'App',
-  components: {
-    Header,
+  export default {
+    name: 'App',
+    components: {
+      Header,
+      Aside
+    }
   }
-}
 </script>
 
 <style lang="scss">
-#app {
-  text-align: center;
-  margin-top: 60px;
-}
+  #app {
+    display: flex;
+    text-align: center;
+  }
 </style>

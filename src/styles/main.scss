@@ -1,8 +1,18 @@
 @import "stylesheet.css";
 
+:root {
+  --color-main: #3C3C3B;
+  --background-light: #F8F8F8;
+}
+
 *,
 ::before,
 ::after {
   font-family: Roboto, Helvetica, Arial, sans-serif;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+ol, ul {
+  padding-left: 0;
+  margin-bottom: 0;
 }
