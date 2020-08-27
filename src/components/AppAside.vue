@@ -171,11 +171,9 @@
 </template>
 
 <script>
-  import MobMenu from './MobMenu';
 
   export default {
     name: 'AppAside',
-    components: MobMenu
   }
 </script>
 
