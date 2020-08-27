@@ -22,7 +22,7 @@
 
       <div class="header__search">
         <input type="text" placeholder="Что вы ищете...">
-        <button class="">
+        <button>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0)">
               <path d="M13.8399 12.345L9.60786 8.11308C9.50529 8.01052 9.36622 7.9529 9.22117 7.9529C9.08844 7.9529 8.9611 8.0016 8.86176 8.08836L8.26465 7.49126C9.69126 5.68663 9.58741 3.04317 7.90063 1.35636C7.90063 1.35636 7.90063 1.35636 7.9006 1.35636C6.09638 -0.447861 3.16067 -0.447916 1.35637 1.35636C-0.451985 3.16474 -0.452259 6.09194 1.35637 7.90059C3.01925 9.56345 5.66426 9.70452 7.49096 8.26429L8.08845 8.86178C7.90055 9.07657 7.90837 9.40305 8.11314 9.6078L12.3451 13.8398C12.5586 14.0532 12.905 14.0533 13.1185 13.8398L13.4791 13.4792C13.4791 13.4792 13.4792 13.4791 13.4792 13.4791C13.4792 13.4791 13.4792 13.4791 13.4792 13.479L13.8398 13.1184C14.0534 12.9049 14.0534 12.5586 13.8399 12.345ZM7.12726 7.1272C5.74627 8.5082 3.51094 8.50836 2.12976 7.1272C0.748788 5.74629 0.748542 3.51086 2.12976 2.12967C3.50753 0.7519 5.74941 0.751818 7.12726 2.12967C8.50823 3.51061 8.50851 5.74604 7.12726 7.1272Z" fill="white" />
@@ -81,7 +81,7 @@
 
       <div class="call-to-action">
         <span>Бесплатно по РФ</span>
-        <span class="tel">8 800 555-63-74</span>
+        <span class="tel"><a href="tel:+8005556374">800 555-63-74</a></span>
         <span>
           <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0.804665 8.12956L4.87935 13.9999L8.95403 8.12956C9.43862 7.43122 9.71503 6.62136 9.75394 5.78592C9.79284 4.95049 9.59279 4.12064 9.175 3.38442C8.75722 2.64821 8.13729 2.03309 7.38099 1.60435C6.62469 1.1756 5.76023 0.949219 4.87935 0.949219C3.99847 0.949219 3.13401 1.1756 2.37771 1.60435C1.62142 2.03309 1.00148 2.64821 0.583698 3.38442C0.165912 4.12064 -0.034142 4.95049 0.00476186 5.78592C0.0436657 6.62136 0.320077 7.43122 0.804665 8.12956ZM2.30972 3.13986C2.9466 2.53892 3.79528 2.18309 4.69214 2.14098C5.589 2.09887 6.47053 2.37346 7.16677 2.91181C7.863 3.45016 8.32464 4.21414 8.46269 5.05647C8.60073 5.8988 8.4054 6.75982 7.91435 7.47353L4.87935 11.8515L1.84435 7.47353C1.38771 6.80972 1.18479 6.01728 1.26949 5.22854C1.35419 4.43981 1.72137 3.70254 2.30972 3.13986Z" fill="white" />
@@ -93,7 +93,7 @@
       </div>
 
       <div class="consult">
-        <span>Запросить консультацию</span>
+        <span><a href="#">Запросить консультацию</a></span>
       </div>
     </div>
 
@@ -127,12 +127,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 49px;
+      min-height: 49px;
       padding: 0 50px;
       list-style-type: none;
       font-size: 14px;
       line-height: 16px;
       letter-spacing: 0.06em;
+
+      li {
+        cursor: pointer;
+      }
 
       svg {
         margin-left: 11px;
@@ -166,7 +170,7 @@
         line-height: 16px;
         letter-spacing: 0.04em;
         color: #fff;
-        background-color: var(--color-main);
+        background-color: var(--background-main);
 
         svg {
           margin-right: 8px;
@@ -184,8 +188,12 @@
     line-height: 14px;
     letter-spacing: 0.06em;
     color: #fff;
-    background-color: #95b03c;
+    background-color: var(--color-green);
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+    a {
+      color: #ffffff;
+    }
   }
 
   .user-menu {
@@ -251,7 +259,7 @@
     font-size: 18px;
     line-height: 22px;
     height: 100%;
-    background-color: #3C3C3B;
+    background-color: var(--background-main);
   }
 
   @media (max-width: 1705px) {
@@ -261,6 +269,10 @@
 
     .header__menu {
       padding: 0 20px;
+
+      & li:hover {
+        color: var(--color-green);
+      }
     }
 
     .header__search {
@@ -318,12 +330,10 @@
 
       .left__container {
         flex: 1 1 auto;
+        width: 100%;
       }
 
       &__search {
-        flex: 1 1 auto;
-        width: 100%;
-
         input {
           max-width: 90%;
           padding-left: 15px;
@@ -333,13 +343,56 @@
 
     .call-to-action {
       flex: 1 1 auto;
+      align-items: center;
       max-width: 350px;
       padding-left: 20px;
       margin: 0;
     }
   }
 
-  @media (max-width: 930px) {
+  @media (max-width: 600px) {
+    .left__container {
+      min-width: 100%;
+    }
+
+    .header{
+      &__menu {
+        display: none;
+      }
+
+      &__search {
+        flex-wrap: wrap;
+
+        input {
+          margin-bottom: 10px;
+        }
+
+        button {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    .call-to-action {
+      display: none;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .header {
+
+      .left__container {
+        display: none;
+      }
+
+      .header__search {
+        display: none;
+      }
+    }
+
 
   }
 </style>
