@@ -23,4 +23,12 @@
     display: flex;
     text-align: center;
   }
+
+  @media (max-width: 930px) {
+    #app {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+  }
 </style>

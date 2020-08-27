@@ -171,8 +171,7 @@
   .aside {
     min-height: 100vh;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
-    //noinspection CssInvalidFunction
-    width: clamp(320px, 100%, 373px);
+    min-width: 373px;
 
     img {
       height: 48px;
@@ -203,6 +202,7 @@
           color: #95b03c;
           background: #FFFFFF;
           text-transform: uppercase;
+          font-weight: bold;
         }
 
         &:last-child {
@@ -228,4 +228,32 @@
     }
   }
 
+  @media (max-width: 1705px) {
+    .aside {
+      min-width: 282px;
+
+      img {
+        max-width: 222px;
+      }
+
+      ul li {
+        width: 222px;
+        font-size: 14px;
+
+        &:hover {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 929px) {
+    .aside {
+      min-height: auto;
+    }
+
+    nav {
+      display: none;
+    }
+  }
 </style>

@@ -88,12 +88,12 @@
           <path d="M4.87951 7.95679C5.38213 7.95679 5.87346 7.81532 6.2914 7.55026C6.70933 7.2852 7.0351 6.90845 7.22751 6.46765C7.41993 6.02684 7.47035 5.54177 7.37241 5.07377C7.27446 4.60576 7.03255 4.17583 6.67726 3.83833C6.32196 3.50083 5.86923 3.27091 5.37631 3.17765C4.88339 3.08438 4.3724 3.13195 3.90795 3.31435C3.44351 3.49674 3.04645 3.80577 2.76699 4.20237C2.48752 4.59897 2.3382 5.06532 2.33789 5.54247C2.3383 6.18241 2.60616 6.79605 3.08267 7.2487C3.55919 7.70135 4.20541 7.95601 4.87951 7.95679ZM4.87951 4.31167C5.13593 4.31167 5.3866 4.38385 5.5998 4.5191C5.81301 4.65434 5.97918 4.84656 6.07731 5.07146C6.17544 5.29636 6.20111 5.54384 6.15109 5.78259C6.10106 6.02134 5.97759 6.24065 5.79627 6.41278C5.61495 6.58491 5.38394 6.70213 5.13244 6.74962C4.88095 6.79711 4.62027 6.77274 4.38337 6.67958C4.14646 6.58643 3.94398 6.42867 3.80152 6.22627C3.65906 6.02386 3.58302 5.7859 3.58302 5.54247C3.58343 5.21616 3.72016 4.90333 3.96321 4.67259C4.20626 4.44186 4.53579 4.31206 4.87951 4.31167Z" fill="white" />
           </svg>
           Москва
-          <div></div>
+          <div class="dotted"></div>
         </span>
       </div>
 
       <div class="consult">
-
+        <span>Запросить консультацию</span>
       </div>
     </div>
 
@@ -112,7 +112,6 @@
   .header {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     height: 103px;
     width: 100%;
 
@@ -144,6 +143,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      min-height: 54px;
       background-color: var(--background-light);
 
       input {
@@ -190,9 +190,10 @@
 
   .user-menu {
     display: flex;
+    flex: 1 1 357px;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex: 0 1 357px;
     padding: 0 25px;
     height: 100%;
     border-right: 1px solid rgba(255, 255, 255, 0.25);
@@ -201,6 +202,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      /*padding-right: 22px;*/
+
+      &:last-child {
+        padding-right: 0;
+      }
 
       svg {
         margin-bottom: 8px;
@@ -218,12 +224,11 @@
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    margin-bottom: 10px;
-    flex: 0 1 188px;
+    margin: 0 25px;
+    width: 188px;
     height: 100%;
-    border-right: 1px solid rgba(255, 255, 255, 0.25);
 
-    div {
+    .dotted {
       margin-left: 15px;
       width: 75%;
       border-bottom: 2px dashed #ffffff;
@@ -237,6 +242,104 @@
   }
 
   .consult {
+    display: flex;
     flex: 0 1 224px;
+    text-align: start;
+    align-items: center;
+    padding-left: 50px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    height: 100%;
+    background-color: #3C3C3B;
+  }
+
+  @media (max-width: 1705px) {
+    .left__container {
+      min-width: 568px;
+    }
+
+    .header__menu {
+      padding: 0 20px;
+    }
+
+    .header__search {
+      input {
+        max-width: 379px;
+        padding-left: 15px;
+      }
+
+      button {
+        width: 131px;
+      }
+    }
+
+    .user-menu {
+      flex: 1 0 121px;
+      min-width: 121px;
+      padding: 15px 10px;
+      margin-top: 10px;
+
+      &__item {
+        span {
+          display: none;
+        }
+
+        &:first-child {
+          padding-left: 12px;
+        }
+      }
+    }
+
+    .call-to-action {
+      max-width: 162px;
+      padding-left: 20px;
+      margin: 0;
+
+      .tel {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+
+    .consult {
+      flex: 1 0 auto;
+      width: 147px;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      padding-left: 20px;
+    }
+  }
+
+  @media (max-width: 1279px) {
+    .header {
+      flex-wrap: wrap;
+
+      .left__container {
+        flex: 1 1 auto;
+      }
+
+      &__search {
+        flex: 1 1 auto;
+        width: 100%;
+
+        input {
+          max-width: 90%;
+          padding-left: 15px;
+        }
+      }
+    }
+
+    .call-to-action {
+      flex: 1 1 auto;
+      max-width: 350px;
+      padding-left: 20px;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 930px) {
+
   }
 </style>
