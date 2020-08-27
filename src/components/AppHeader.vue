@@ -1,7 +1,7 @@
 <template>
   <section class="header">
 
-    <div class="left__container">
+    <div id="left__container">
       <ul class="header__menu">
         <li>
           О компании
@@ -38,8 +38,21 @@
       </div>
     </div>
 
-    <div class="right-container">
+    <div id="right-container">
       <div class="user-menu">
+        <div class="user-menu__item search-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+              <path d="M13.8399 12.345L9.60786 8.11308C9.50529 8.01052 9.36622 7.9529 9.22117 7.9529C9.08844 7.9529 8.9611 8.0016 8.86176 8.08836L8.26465 7.49126C9.69126 5.68663 9.58741 3.04317 7.90063 1.35636C7.90063 1.35636 7.90063 1.35636 7.9006 1.35636C6.09638 -0.447861 3.16067 -0.447916 1.35637 1.35636C-0.451985 3.16474 -0.452259 6.09194 1.35637 7.90059C3.01925 9.56345 5.66426 9.70452 7.49096 8.26429L8.08845 8.86178C7.90055 9.07657 7.90837 9.40305 8.11314 9.6078L12.3451 13.8398C12.5586 14.0532 12.905 14.0533 13.1185 13.8398L13.4791 13.4792C13.4791 13.4792 13.4792 13.4791 13.4792 13.4791C13.4792 13.4791 13.4792 13.4791 13.4792 13.479L13.8398 13.1184C14.0534 12.9049 14.0534 12.5586 13.8399 12.345ZM7.12726 7.1272C5.74627 8.5082 3.51094 8.50836 2.12976 7.1272C0.748788 5.74629 0.748542 3.51086 2.12976 2.12967C3.50753 0.7519 5.74941 0.751818 7.12726 2.12967C8.50823 3.51061 8.50851 5.74604 7.12726 7.1272Z" fill="white"/>
+            </g>
+            <defs>
+              <clipPath id="clip0">
+                <rect width="14" height="14" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+
         <div class="user-menu__item">
           <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.1672 11.0625C11.1623 11.0625 12.1351 10.7674 12.9624 10.2146C13.7898 9.66174 14.4347 8.87597 14.8155 7.95663C15.1963 7.03729 15.2959 6.02567 15.1018 5.0497C14.9077 4.07374 14.4285 3.17725 13.7249 2.47362C13.0212 1.76999 12.1248 1.29081 11.1488 1.09668C10.1728 0.902544 9.1612 1.00218 8.24186 1.38298C7.32252 1.76379 6.53675 2.40865 5.9839 3.23604C5.43106 4.06342 5.13599 5.03616 5.13599 6.03125C5.13754 7.36515 5.66811 8.64396 6.61132 9.58717C7.55452 10.5304 8.83334 11.061 10.1672 11.0625ZM10.1672 3.09375C10.7481 3.09375 11.316 3.26601 11.799 3.58874C12.282 3.91148 12.6585 4.37019 12.8808 4.90688C13.1031 5.44356 13.1612 6.03412 13.0479 6.60386C12.9346 7.17361 12.6548 7.69695 12.2441 8.10771C11.8333 8.51847 11.31 8.79821 10.7402 8.91153C10.1705 9.02486 9.57994 8.9667 9.04325 8.7444C8.50657 8.52209 8.04785 8.14564 7.72512 7.66263C7.40239 7.17963 7.23013 6.61177 7.23013 6.03086C7.23106 5.25221 7.54081 4.50573 8.09144 3.95518C8.64206 3.40463 9.38859 3.09497 10.1672 3.09414V3.09375Z" fill="white" stroke="white" stroke-width="0.6" />
@@ -94,6 +107,7 @@
 
       <div class="consult">
         <span><a href="#">Запросить консультацию</a></span>
+        <span><a href="#">Консультация</a></span>
       </div>
     </div>
 
@@ -103,8 +117,7 @@
 <script>
 
   export default {
-    name: 'Header',
-    components: {},
+    name: 'AppHeader',
   }
 </script>
 
@@ -115,7 +128,7 @@
     height: 103px;
     width: 100%;
 
-    .left__container {
+    #left__container {
       display: flex;
       flex: 0 1 776px;
       flex-direction: column;
@@ -170,7 +183,7 @@
         line-height: 16px;
         letter-spacing: 0.04em;
         color: #fff;
-        background-color: var(--background-main);
+        background-color: var(--color-main);
 
         svg {
           margin-right: 8px;
@@ -179,7 +192,7 @@
     }
   }
 
-  .right-container {
+  #right-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -192,7 +205,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 
     a {
-      color: #ffffff;
+      color: #fff;
     }
   }
 
@@ -210,7 +223,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      /*padding-right: 22px;*/
 
       &:last-child {
         padding-right: 0;
@@ -224,6 +236,10 @@
         font-size: 14px;
         margin-left: 35px;
       }
+    }
+
+    .search-icon {
+      display: none;
     }
   }
 
@@ -239,7 +255,7 @@
     .dotted {
       margin-left: 15px;
       width: 75%;
-      border-bottom: 2px dashed #ffffff;
+      border-bottom: 2px dashed #fff;
     }
 
     .tel {
@@ -259,11 +275,16 @@
     font-size: 18px;
     line-height: 22px;
     height: 100%;
-    background-color: var(--background-main);
+    background-color: var(--color-main);
+
+
+    & span:nth-child(2) {
+      display: none;
+    }
   }
 
   @media (max-width: 1705px) {
-    .left__container {
+    #left__container {
       min-width: 568px;
     }
 
@@ -328,7 +349,7 @@
     .header {
       flex-wrap: wrap;
 
-      .left__container {
+      #left__container {
         flex: 1 1 auto;
         width: 100%;
       }
@@ -351,11 +372,11 @@
   }
 
   @media (max-width: 600px) {
-    .left__container {
+    #left__container {
       min-width: 100%;
     }
 
-    .header{
+    .header {
       &__menu {
         display: none;
       }
@@ -384,7 +405,7 @@
   @media (max-width: 400px) {
     .header {
 
-      .left__container {
+      #left__container {
         display: none;
       }
 
@@ -393,6 +414,56 @@
       }
     }
 
+    #right-container {
+      background-color: #fff;
+      width: 100%;
+      height: 55px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 
+      .user-menu {
+        flex-wrap: nowrap;
+        justify-content: start;
+        align-items: center;
+        margin-top: 7px;
+        padding: 0;
+
+        .search-icon {
+          display: block;
+        }
+
+        &__item {
+          color: #3C3C3B;
+
+          svg {
+            width: 19px;
+            height: 19px;
+            margin-right: 5px;
+            fill: #3c3c3b;
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(47deg) brightness(20%) contrast(70%);
+          }
+
+          sup {
+            margin-left: 25px;
+            font-weight: bold;
+            font-size: 11px;
+            letter-spacing: 0.1em;
+          }
+        }
+      }
+
+      .consult {
+        max-width: 138px;
+        height: 43px;
+        margin-right: 10px;
+
+        span:first-child {
+          display: none;
+        }
+
+        span:nth-child(2) {
+          display: block;
+        }
+      }
+    }
   }
 </style>

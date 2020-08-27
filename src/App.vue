@@ -1,19 +1,23 @@
 <template>
   <div id="app" class="">
-    <Aside />
-    <Header />
+    <app-aside />
+    <!--<app-header />-->
+    <mob-menu />
   </div>
 </template>
 
 <script>
-  import Header from './components/Header.vue'
-  import Aside from './components/Aside'
+  import AppHeader from './components/AppHeader.vue'
+  import AppAside from './components/AppAside'
+  import MobMenu from './components/MobMenu'
 
   export default {
     name: 'App',
     components: {
-      Header,
-      Aside
+      // eslint-disable-next-line vue/no-unused-components
+      AppHeader,
+      AppAside,
+      MobMenu,
     }
   }
 </script>
