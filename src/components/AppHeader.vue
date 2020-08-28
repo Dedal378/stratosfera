@@ -3,7 +3,7 @@
 
     <div id="left__container">
       <ul class="header__menu">
-        <li>
+        <li @click="openMenuItem()">
           О компании
           <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.92808 4.89529L10.195 0.791786L11.5738 2.23238L5.92808 7.64551L0.296875 2.23238L1.67565 0.791787L5.92808 4.89529Z" fill="#3C3C3B" />
@@ -111,6 +111,7 @@
       </div>
     </div>
 
+    <mob-about @close="closeMenuItem()" :class="{'active': isActive }"></mob-about>
   </section>
 </template>
 
@@ -118,6 +119,19 @@
 
   export default {
     name: 'AppHeader',
+    data () {
+      return {
+        isActive: false
+      }
+    },
+    methods: {
+      openMenuItem () {
+        this.isActive = true
+      },
+      closeMenuItem () {
+        this.isActive = false
+      }
+    },
   }
 </script>
 
@@ -223,6 +237,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      &:nth-child(2) {
+        margin-left: 10px;
+      }
 
       &:last-child {
         padding-right: 0;

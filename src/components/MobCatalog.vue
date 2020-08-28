@@ -261,6 +261,8 @@
       </li>
 
     </ul>
+
+    <mob-catalog-electric></mob-catalog-electric>
   </nav>
 </template>
 
@@ -271,6 +273,18 @@
 </script>
 
 <style scoped lang="scss">
+  nav {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid var(--background-light);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    top: 90px;
+    //noinspection CssInvalidFunction
+    left: clamp(60%, 88%, 100%);
+  }
+
   ul {
     display: flex;
     flex-direction: column;
