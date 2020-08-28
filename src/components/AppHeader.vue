@@ -106,32 +106,10 @@
       </div>
 
       <div class="consult">
-        <button type="button" class="btn" data-toggle="modal" data-target="#staticBackdrop">Запросить консультацию</button>
-        <button type="button" class="btn" data-toggle="modal" data-target="#staticBackdrop2">Консультация</button>
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <span><a href="#">Запросить консультацию</a></span>
+        <span><a href="#">Консультация</a></span>
       </div>
-      </div>
-
-
+    </div>
 
     <mob-about @close="closeMenuItem()" :class="{'active': isActive }"></mob-about>
   </section>
@@ -329,15 +307,15 @@
     height: 100%;
     background-color: var(--color-main);
 
-    button {
+    span a {
       color: #ffffff;
       animation: 1.5s ease-in infinite alternate puls;
     }
-    button:hover {
+    span a:hover {
       color: var(--color-green) !important;
     }
 
-    & button:nth-child(2) {
+    & span:nth-child(2) {
       display: none;
     }
   }
