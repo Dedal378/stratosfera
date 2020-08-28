@@ -67,6 +67,8 @@
         </span>
       </div>
     </ul>
+
+
   </nav>
 </template>
 
@@ -78,14 +80,15 @@
 
 <style scoped lang="scss">
   nav {
+    display: none;
     position: absolute;
     background-color: #fff;
     border: 1px solid var(--background-light);
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     width: 320px;
-    top: 90px;
+    top: 62px;
     //noinspection CssInvalidFunction
-    left: clamp(60%, 88%, 100%);
+    left: clamp(0%, 0%, 90%);
   }
   ul {
     display: flex;
