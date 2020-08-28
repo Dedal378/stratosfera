@@ -565,4 +565,13 @@
       }
     }
   }
+
+  @media (max-width: 929px) {
+    nav {
+      top: -4px;
+      //noinspection CssInvalidFunction
+      left: clamp(0%, 0%, 80%);
+    }
+
+  }
 </style>

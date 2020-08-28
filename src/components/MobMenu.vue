@@ -86,6 +86,7 @@
     border: 1px solid var(--background-light);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     width: 320px;
+    padding-bottom: 40px;
     top: 62px;
     //noinspection CssInvalidFunction
     left: clamp(0%, 0%, 90%);

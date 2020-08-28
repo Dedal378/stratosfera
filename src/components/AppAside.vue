@@ -168,7 +168,8 @@
       </transition>
     </nav>
 
-    <mob-menu @close="closeMenu()" :class="{'active': isActive }" class="mob-menu"></mob-menu>
+    <mob-menu class="mob-menu"></mob-menu>
+    <mob-catalog @close="closeMenu()" :class="{'active': isActive }" ></mob-catalog>
     <mob-catalog-electric @close="closeMenuCatalog()" :class="{'active': isActiveCatalog }" class="catalog"></mob-catalog-electric>
   </section>
 </template>
@@ -188,13 +189,13 @@
         this.isActive = true
       },
       closeMenu () {
-        this.isActive = false
+        this.isActive = !this.isActive
       },
       openMenuCatalog () {
-        this.isActive = true
+        this.isActiveCatalog = true
       },
       closeMenuCatalog () {
-        this.isActive = false
+        this.isActiveCatalog = false
       },
     },
   }
@@ -267,6 +268,7 @@
   }
 
   .mob-menu {
+    display: none;
     z-index: 100;
   }
 
@@ -331,8 +333,7 @@
         }
       }
     }
-
-    .mob-menu {
+    .catalog {
       display: none;
     }
   }

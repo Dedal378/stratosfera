@@ -106,10 +106,32 @@
       </div>
 
       <div class="consult">
-        <span><a href="#">Запросить консультацию</a></span>
-        <span><a href="#">Консультация</a></span>
+        <button type="button" class="btn" data-toggle="modal" data-target="#staticBackdrop">Запросить консультацию</button>
+        <button type="button" class="btn" data-toggle="modal" data-target="#staticBackdrop2">Консультация</button>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+      </div>
+
+
 
     <mob-about @close="closeMenuItem()" :class="{'active': isActive }"></mob-about>
   </section>
@@ -163,6 +185,10 @@
 
       li {
         cursor: pointer;
+
+        &:hover {
+          color: var(--color-green);
+        }
       }
 
       svg {
@@ -201,6 +227,10 @@
 
         svg {
           margin-right: 8px;
+        }
+
+        &:hover {
+          transform: scale(1.05);
         }
       }
     }
@@ -244,6 +274,10 @@
 
       &:last-child {
         padding-right: 0;
+      }
+
+      &:hover {
+        transform: scale(1.1);
       }
 
       svg {
@@ -295,9 +329,25 @@
     height: 100%;
     background-color: var(--color-main);
 
+    button {
+      color: #ffffff;
+      animation: 1.5s ease-in infinite alternate puls;
+    }
+    button:hover {
+      color: var(--color-green) !important;
+    }
 
-    & span:nth-child(2) {
+    & button:nth-child(2) {
       display: none;
+    }
+  }
+
+  @keyframes puls {
+    from {
+      color: #ffffff;
+    }
+    to {
+      color: var(--color-green);
     }
   }
 
