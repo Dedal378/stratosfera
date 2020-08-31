@@ -4,11 +4,11 @@ import { BootstrapVue } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import MobMenu from './components/MobMenu';
-import MobAbout from "@/components/MobAbout";
+import MobAbout from "./components/MobAbout";
 import MobCatalog from './components/MobCatalog'
-import MobCatalogElectric from "@/components/MobCatalogElectric";
+import MobCatalogElectric from "./components/MobCatalogElectric";
 
-import '@/styles/main.scss'
+import './styles/main.scss'
 
 Vue.use(BootstrapVue)
 Vue.component('mob-menu', MobMenu)

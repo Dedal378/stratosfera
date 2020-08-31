@@ -1,7 +1,7 @@
 <template>
   <nav class="mob-menu">
     <ul>
-      <li>
+      <li @click="openMenu()" >
         <a href="#">
           Каталог
           <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,13 +68,30 @@
       </div>
     </ul>
 
-
+    <mob-catalog @close="closeMenu()" :class="{'active': isActive }" class="catalog"></mob-catalog>
   </nav>
 </template>
 
 <script>
+  import MobCatalog from './MobCatalog';
+
   export default {
-    name: "MobMenu"
+    name: "MobMenu",
+    components: MobCatalog,
+    data () {
+      return {
+        isActive: false,
+      }
+    },
+    methods: {
+      openMenu () {
+        this.isActive = true
+      },
+      closeMenu () {
+        this.isActive = false
+      },
+    },
+
   }
 </script>
 
