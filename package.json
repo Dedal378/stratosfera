@@ -29,5 +29,13 @@
   "description": "## Project setup ``` npm install ```",
   "main": ".eslintrc.js",
   "author": "orlovetsjob@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dedal378/stratosfera.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dedal378/stratosfera/issues"
+  },
+  "homepage": "https://github.com/Dedal378/stratosfera#readme"
 }
